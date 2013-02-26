@@ -43,7 +43,9 @@
             <a class="brand" href="#">
 
 <?php 
+#determine which record to read from as well as the file path to all img data ( tweak? )
 $id = 2;
+$currentImgPath = 'assets/img/examples/';
 #insert brand name in from database
 $query = $link->query("SELECT brand FROM homeInfo WHERE ID = $id");
 if ($query) {
@@ -92,7 +94,7 @@ if ($query) {
 $query = $link->query("SELECT headline1, lead1, button1, href1, img1 FROM homeInfo WHERE ID = $id");
 if ($query) {
   while ($row = $query->fetch_assoc()) {
-    echo '<img src="assets/img/examples/' . $row["img1"] . '" alt="">
+    echo '<img src="'. $currentImgPath . $row["img1"] . '" alt="">
           <div class="container">
           <div class="carousel-caption">';
     echo '<h1>' . $row["headline1"] . '</h1>';
@@ -110,7 +112,7 @@ if ($query) {
 $query = $link->query("SELECT headline2, lead2, button2, href2, img2 FROM homeInfo WHERE ID = $id");
 if ($query) {
   while ($row = $query->fetch_assoc()) {
-        echo '<img src="assets/img/examples/' . $row["img2"] . '" alt="">
+        echo '<img src="' . $currentImgPath . $row["img2"] . '" alt="">
           <div class="container">
           <div class="carousel-caption">';
     echo '<h1>' . $row["headline2"] . '</h1>';
@@ -129,7 +131,7 @@ if ($query) {
 $query = $link->query("SELECT headline3, lead3, button3, href3, img3 FROM homeInfo WHERE ID = $id");
 if ($query) {
   while ($row = $query->fetch_assoc()) {
-        echo '<img src="assets/img/examples/' . $row["img3"] . '" alt="">
+        echo '<img src="' . $currentImgPath . $row["img3"] . '" alt="">
           <div class="container">
           <div class="carousel-caption">';
     echo '<h1>' . $row["headline3"] . '</h1>';
@@ -154,55 +156,30 @@ if ($query) {
 
     <div class="container marketing">
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="span4">
-          <img class="img-rounded" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-rounded" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-rounded" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-      </div><!-- /.row -->
-
-
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
+<?php 
+$query = $link->query("SELECT featureHead1, featureHead2, featureLead1, featureLead2, featureFoot1, featureFoot2, featureImg1, featureImg2 FROM homeInfo WHERE ID = $id");
+if ($query) {
+  while ($row = $query->fetch_assoc()) {
+    echo '<div class="featurette">
+            <img class="featurette-image pull-right" src="' . $currentImgPath . $row["featureImg1"] . '"">
+            <h2 class="featurette-heading">'. $row["featureHead1"] . '<span class="muted">'.$row["featureFoot1"].'</span></h2>
+            <p class="lead">'.$row["featureLead1"].'</p>
+          </div>
 
-      <div class="featurette">
-        <img class="featurette-image pull-right" src="assets/img/examples/browser-icon-chrome.png">
-        <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
+        <hr class="featurette-divider">
 
-      <hr class="featurette-divider">
+          <div class="featurette">
+            <img class="featurette-image pull-left" src="' . $currentImgPath . $row["featureImg2"] . '"">
+            <h2 class="featurette-heading">'. $row["featureHead2"] . '<span class="muted">'.$row["featureFoot2"].'</span></h2>
+            <p class="lead">'.$row["featureLead2"].'</p>
+          </div>
 
-      <div class="featurette">
-        <img class="featurette-image pull-left" src="assets/img/examples/browser-icon-firefox.png">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="featurette">
-        <img class="featurette-image pull-right" src="assets/img/examples/browser-icon-safari.png">
-        <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-
+      <hr class="featurette-divider">';
+  }
+}?>
       <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
