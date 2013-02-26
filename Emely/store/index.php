@@ -165,7 +165,7 @@ if ($query) {
   while ($row = $query->fetch_assoc()) {
     echo '<div class="featurette">
             <img class="featurette-image pull-right" src="' . $currentImgPath . $row["featureImg1"] . '"">
-            <h2 class="featurette-heading">'. $row["featureHead1"] . '<span class="muted">'.$row["featureFoot1"].'</span></h2>
+            <h2 class="featurette-heading">'. $row["featureHead1"] . ' <span class="muted">'.$row["featureFoot1"].'</span></h2>
             <p class="lead">'.$row["featureLead1"].'</p>
           </div>
 
@@ -173,7 +173,7 @@ if ($query) {
 
           <div class="featurette">
             <img class="featurette-image pull-left" src="' . $currentImgPath . $row["featureImg2"] . '"">
-            <h2 class="featurette-heading">'. $row["featureHead2"] . '<span class="muted">'.$row["featureFoot2"].'</span></h2>
+            <h2 class="featurette-heading">'. $row["featureHead2"] . ' <span class="muted">'.$row["featureFoot2"].'</span></h2>
             <p class="lead">'.$row["featureLead2"].'</p>
           </div>
 
