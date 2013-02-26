@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 26, 2013 at 01:32 PM
+-- Generation Time: Feb 26, 2013 at 02:09 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.6-1ubuntu1.1
 
@@ -71,6 +71,14 @@ CREATE TABLE IF NOT EXISTS `homeInfo` (
   `button3` varchar(30) NOT NULL,
   `href3` varchar(50) NOT NULL DEFAULT '#',
   `img3` varchar(50) NOT NULL,
+  `featureHead1` varchar(50) NOT NULL,
+  `featureFoot1` varchar(50) NOT NULL,
+  `featureLead1` varchar(500) NOT NULL,
+  `featureImg1` varchar(50) NOT NULL,
+  `featureHead2` varchar(50) NOT NULL,
+  `featureFoot2` varchar(50) NOT NULL,
+  `featureLead2` varchar(500) NOT NULL,
+  `featureImg2` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
@@ -78,9 +86,9 @@ CREATE TABLE IF NOT EXISTS `homeInfo` (
 -- Dumping data for table `homeInfo`
 --
 
-INSERT INTO `homeInfo` (`ID`, `brand`, `headline1`, `lead1`, `button1`, `href1`, `img1`, `headline2`, `lead2`, `button2`, `href2`, `img2`, `headline3`, `lead3`, `button3`, `href3`, `img3`) VALUES
-(1, 'Store Name', 'Example headline.', 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'Sign up today', '#', '', 'Another example headline.', 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'Learn more', '#', '', 'One more for good measure.', 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'Browse gallery', '#', ''),
-(2, 'HB Store', 'Buy something special.', 'HB has an eclectic collection of gifts, many of which are hand made.  What''s more special than hand crafted gifts made with love?  Possibly nothing.', 'Take a peek', '#', 'slide-01.jpg', 'Don''t see what you want?', 'Here at HB, we believe in the individual.  If you see something you want, but would like it more specialized - send us a message, we can work with you to customize.', 'Send request', '#', 'slide-02.jpg', 'New items.', 'WE GOT''S A NEW SHIPMENT OF STUFF. ', 'Take a look?', '#', 'slide-03.jpg');
+INSERT INTO `homeInfo` (`ID`, `brand`, `headline1`, `lead1`, `button1`, `href1`, `img1`, `headline2`, `lead2`, `button2`, `href2`, `img2`, `headline3`, `lead3`, `button3`, `href3`, `img3`, `featureHead1`, `featureFoot1`, `featureLead1`, `featureImg1`, `featureHead2`, `featureFoot2`, `featureLead2`, `featureImg2`) VALUES
+(1, 'Store Name', 'Example headline.', 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'Sign up today', '#', '', 'Another example headline.', 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'Learn more', '#', '', 'One more for good measure.', 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'Browse gallery', '#', '', '', '', '', '', '', '', '', ''),
+(2, 'HB Store', 'Buy something special.', 'HB has an eclectic collection of gifts, many of which are hand made.  What''s more special than hand crafted gifts made with love?  Possibly nothing.', 'Take a peek', '#', 'slide-01.jpg', 'Don''t see what you want?', 'Here at HB, we believe in the individual.  If you see something you want, but would like it more specialized - send us a message, we can work with you to customize.', 'Send request', '#', 'slide-02.jpg', 'New items.', 'WE GOT''S A NEW SHIPMENT OF STUFF. ', 'Take a look?', '#', 'slide-03.jpg', 'First featurette headling. ', 'It''ll blow your mind.', 'Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.', 'browser-icon-chrome.png', 'Oh yeah, it''s that good. ', 'See for yourself.', 'Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.', 'browser-icon-firefox.png');
 
 -- --------------------------------------------------------
 
