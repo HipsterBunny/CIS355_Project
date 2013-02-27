@@ -44,7 +44,7 @@
 
 <?php 
 #determine which record to read from as well as the file path to all img data ( tweak? )
-$id = 2;
+$id = 3;
 $currentImgPath = 'assets/img/examples/';
 #insert brand name in from database
 $query = $link->query("SELECT brand FROM homeInfo WHERE ID = $id");
