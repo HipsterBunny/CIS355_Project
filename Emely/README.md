@@ -5,7 +5,11 @@ For the how putting stuff in Databases, this was
 a pretty sweet thing to read up on.  I know it's not 100% 
 relevant, but it's cool.
 
-http://css-tricks.com/php-for-beginners-building-your-first-simple-cms/
+    http://css-tricks.com/php-for-beginners-building-your-first-simple-cms/
+
+** this is also really cool - especially the part about the SALT
+
+    http://phpsec.org/articles/2005/password-hashing.html
 
 I haven't really done that much for the project
 
