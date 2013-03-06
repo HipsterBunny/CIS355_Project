@@ -1,6 +1,12 @@
 Emely's Folder
 ==============
 
+For the how putting stuff in Databases, this was 
+a pretty sweet thing to read up on.  I know it's not 100% 
+relevant, but it's cool.
+
+http://css-tricks.com/php-for-beginners-building-your-first-simple-cms/
+
 I haven't really done that much for the project
 
 I was thinking we could use Twitter Bootstrap for the 
