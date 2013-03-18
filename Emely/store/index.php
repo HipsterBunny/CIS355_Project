@@ -14,12 +14,12 @@
       <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
 
-    <!-- Fav and touch icons -->
+    <!-- Fav and touch icons
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
   </head>
   <body>
 <?php 
@@ -58,7 +58,7 @@ if ($query) {
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#aboutModal" data-toggle="modal">About</a></li>
                 <li><a href="#products">Products</a></li>
                 <!--<li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
@@ -68,8 +68,11 @@ if ($query) {
                     <li><a href="#">Something else here</a></li>
                   </ul>
                 </li>-->
-
-                <li><a href="#contact">Contact</a></li>
+                
+                <li><a href="#contactModal" data-toggle="modal">Contact</a></li>
+                
+                <!-- this has the cart info. You will want to make the number = to session total items-->
+                <li><a href="#cart"><i class="icon-shopping-cart"></i>0</a></li>
               </ul>
               <form class="navbar-form pull-right">
                 <input class="span2" type="text" placeholder="Email">
@@ -81,7 +84,47 @@ if ($query) {
         </div><!-- /.navbar -->
 
       </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
+    </div><!-- /.navbar-wrapper --> 
+
+    <!--modal info-->
+    <div id="contactModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="contact" aria-hidden="true" >
+      <div class = "modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>Contact Information</h3>
+      </div>
+      <div class = "modal-body">
+        <h2>Emely</h2>
+        <p>ercurtis@svsu.edu</p>
+        <hr>
+        <h2>Brandon</h2>
+        <p>bmjones1@svsu.edu</p>
+        <hr>
+        <h2>Dave</h2>
+        <p>damass@svsu.edu</p>
+      </div>
+    </div>
+
+    <div id="aboutModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="contact" aria-hidden="true" >
+      <div class = "modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>About our Store</h3>
+      </div>
+      <div class = "modal-body">
+        <h2>How did we start</h2>
+        <p>Our store started out as a very hypothetical idea.  A small group of us had ideas for handmade and interesting items
+          that we wanted to buy but couldn't fine.  We have since pooled together all of our talents and brought those items
+          all into one place so that others can enjoy the things we enjoy</p>
+        <hr>
+        <h2>Are these items safe for our pets</h2>
+        <p>Almost all of these items are currently used at our own homes and with our own pets.  We only sell high quality, handmade
+          organic and fun items here.  There is of course the issue of how rough your pet will be with these items, but I can assure you
+          that you will not be dismayed by the quality.</p>
+        <hr>
+        <h2>How much do your artists make?</h2>
+        <p>each artist makes 80% of every item that they make and sell on our site.  This is fair to the artist and should make you
+          sleep better at night knowing that you are actually paying the artists.</p>
+      </div>
+    </div>
 
     <!-- Carousel
     ================================================== -->
@@ -165,7 +208,7 @@ if ($query) {
   while ($row = $query->fetch_assoc()) {
     echo '<div class="featurette">
             <img class="featurette-image pull-right" src="' . $currentImgPath . $row["featureImg1"] . '"">
-            <h2 class="featurette-heading">'. $row["featureHead1"] . ' <span class="muted">'.$row["featureFoot1"].'</span></h2>
+            <h2 class="featurette-heading">'. $row["featureHead1"] . '<span class="muted">'.$row["featureFoot1"].'</span></h2>
             <p class="lead">'.$row["featureLead1"].'</p>
           </div>
 
@@ -173,7 +216,7 @@ if ($query) {
 
           <div class="featurette">
             <img class="featurette-image pull-left" src="' . $currentImgPath . $row["featureImg2"] . '"">
-            <h2 class="featurette-heading">'. $row["featureHead2"] . ' <span class="muted">'.$row["featureFoot2"].'</span></h2>
+            <h2 class="featurette-heading">'. $row["featureHead2"] . '<span class="muted">'.$row["featureFoot2"].'</span></h2>
             <p class="lead">'.$row["featureLead2"].'</p>
           </div>
 
@@ -188,14 +231,13 @@ if ($query) {
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Hipster Bunny &middot; <a href="#">Contact</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2013 Hipster Bunny &middot; <a href="#contactModal" data-toggle="modal">Contact</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
     </div><!-- /.container -->
 
 
-
-    <!-- Le javascript
+    <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
