@@ -2,7 +2,7 @@
 // connection information
 $server = 'localhost';
 $username = 'root';
-$password = 'password';
+$password = '';
 $database = 'store';
 
 $link = @mysqli_connect($localhost, $username, $password, $database);

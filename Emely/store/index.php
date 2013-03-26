@@ -44,7 +44,7 @@
 
 <?php 
 #determine which record to read from as well as the file path to all img data ( tweak? )
-$id = 3;
+$id = 2;
 $currentImgPath = 'assets/img/examples/';
 #insert brand name in from database
 $query = $link->query("SELECT brand FROM homeInfo WHERE ID = $id");
@@ -67,12 +67,12 @@ if ($query) {
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
                   </ul>
-                </li>-->
-                
+                </li> -->
                 <li><a href="#contactModal" data-toggle="modal">Contact</a></li>
-                
+                <li><a href="#registerModal" data-toggle="modal">Register</a></li>
                 <!-- this has the cart info. You will want to make the number = to session total items-->
                 <li><a href="#cart"><i class="icon-shopping-cart"></i>0</a></li>
+				
               </ul>
               <form class="navbar-form pull-right">
                 <input class="span2" type="text" placeholder="Email">
@@ -101,6 +101,21 @@ if ($query) {
         <hr>
         <h2>Dave</h2>
         <p>damass@svsu.edu</p>
+      </div>
+    </div>
+	
+	<div id="registerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="contact" aria-hidden="true" >
+      <div class = "modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>Please Register</h3>
+      </div>
+      <div class = "modal-body">
+		<form action="register.php" method="post">
+			<input class="span2" type="text" placeholder="Name">
+			<input class="span2" type="text" placeholder="Email"><br>
+            <input class="span2" type="password" placeholder="Password"><br>
+            <button type="submit" class="btn">Register</button>
+		</form>
       </div>
     </div>
 
