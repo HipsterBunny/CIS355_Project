@@ -147,9 +147,11 @@ if ($query) {
     echo '<h3>Price: '. $row["price"].' </h3>';
     
     if ($row["stockCount"] != 0) {
+      echo '<a class="btn btn-large btn-inverse">Add to Cart</a>';
       echo '<p> In Stock</p>';
     }
     else {
+      echo '<a class="btn btn-large btn-inverse disabled">Add to Cart</a>';
       echo '<p> Out Of Stock :(</p>';
     }
     echo '</div>';
