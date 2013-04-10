@@ -162,7 +162,10 @@
       line-height: 1;
       letter-spacing: -1px;
     }
-
+    footer {
+margin-left: 20px;
+margin-right: 20px;
+}
     /* RESPONSIVE CSS
     -------------------------------------------------- */
 
