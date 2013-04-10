@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.4.11.1deb1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 26, 2013 at 07:45 PM
--- Server version: 5.5.24-log
--- PHP Version: 5.4.3
+-- Generation Time: Apr 10, 2013 at 12:47 PM
+-- Server version: 5.5.29
+-- PHP Version: 5.4.6-1ubuntu1.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -50,10 +50,10 @@ INSERT INTO `categories` (`categoryID`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `homeinfo`
+-- Table structure for table `homeInfo`
 --
 
-CREATE TABLE IF NOT EXISTS `homeinfo` (
+CREATE TABLE IF NOT EXISTS `homeInfo` (
   `ID` int(10) NOT NULL AUTO_INCREMENT,
   `brand` varchar(50) NOT NULL,
   `headline1` varchar(100) NOT NULL,
@@ -80,15 +80,16 @@ CREATE TABLE IF NOT EXISTS `homeinfo` (
   `featureLead2` varchar(500) NOT NULL,
   `featureImg2` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `homeinfo`
+-- Dumping data for table `homeInfo`
 --
 
-INSERT INTO `homeinfo` (`ID`, `brand`, `headline1`, `lead1`, `button1`, `href1`, `img1`, `headline2`, `lead2`, `button2`, `href2`, `img2`, `headline3`, `lead3`, `button3`, `href3`, `img3`, `featureHead1`, `featureFoot1`, `featureLead1`, `featureImg1`, `featureHead2`, `featureFoot2`, `featureLead2`, `featureImg2`) VALUES
+INSERT INTO `homeInfo` (`ID`, `brand`, `headline1`, `lead1`, `button1`, `href1`, `img1`, `headline2`, `lead2`, `button2`, `href2`, `img2`, `headline3`, `lead3`, `button3`, `href3`, `img3`, `featureHead1`, `featureFoot1`, `featureLead1`, `featureImg1`, `featureHead2`, `featureFoot2`, `featureLead2`, `featureImg2`) VALUES
 (1, 'Store Name', 'Example headline.', 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'Sign up today', '#', '', 'Another example headline.', 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'Learn more', '#', '', 'One more for good measure.', 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.', 'Browse gallery', '#', '', '', '', '', '', '', '', '', ''),
-(2, 'HB Store', 'Buy something special.', 'HB has an eclectic collection of gifts, many of which are hand made.  What''s more special than hand crafted gifts made with love?  Possibly nothing.', 'Take a peek', '#', 'slide-01.jpg', 'Don''t see what you want?', 'Here at HB, we believe in the individual.  If you see something you want, but would like it more specialized - send us a message, we can work with you to customize.', 'Send request', '#', 'slide-02.jpg', 'New items.', 'WE GOT''S A NEW SHIPMENT OF STUFF. ', 'Take a look?', '#', 'slide-03.jpg', 'First featurette headling. ', 'It''ll blow your mind.', 'Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.', 'browser-icon-chrome.png', 'Oh yeah, it''s that good. ', 'See for yourself.', 'Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.', 'browser-icon-firefox.png');
+(2, 'HB Store', 'Buy something special.', 'HB has an eclectic collection of gifts, many of which are hand made.  What''s more special than hand crafted gifts made with love?  Possibly nothing.', 'Take a peek', 'products.php', 'slide-01.jpg', 'Don''t see what you want?', 'Here at HB, we believe in the individual.  If you see something you want, but would like it more specialized - send us a message, we can work with you to customize.', 'Send request', '#contactModal" data-toggle="modal', 'slide-02.jpg', 'New items.', 'WE GOT''S A NEW SHIPMENT OF STUFF. ', 'Take a look?', 'newProducts.php', 'slide-03.jpg', 'Follow us - ', 'In the ''non creepy'' kind of way...', 'There are a lot of ways that you can connect with us through social media.  We will promote specials and deals, as well as post customer action shots.  Each month we pick one action shot and give the owner a 20$ gift card!', 'browser-icon-chrome.png', 'We blog, ', 'and we love it.', 'Follow or blog and you will be treated with outlets for learning, cute geeky nuggets of goodness and other wonderful tidbits of like knowledge.', 'browser-icon-firefox.png'),
+(3, 'HB Pet Store', 'Buy something for your special pal.', 'HB has an eclectic collection of pet toys, many of which are hand made.  What''s more special than hand crafted gifts made with love?  Possibly nothing.', 'Take a peek', '#', 'slide-01.jpg', 'Don''t see what you want?', 'Here at HB, we believe in the individual.  If you see something you want, but would like it more specialized - send us a message, we can work with you to customize.', 'Send request', '#', 'slide-02.jpg', 'New items.', 'WE GOT''S A NEW SHIPMENT OF STUFF. ', 'Take a look?', '#', 'slide-03.jpg', 'Recent shipment -', 'of snake specific goods', 'Python is nice.  Python is fun.  Python wants a lovely home made out of a giant over-sized coconut.  He says he wants it real bad too.', 'Python_by_taiua.png', 'Follow us - ', 'In the ''non creepy'' kind of way...', 'There are a lot of ways that you can connect with us through social media.  We will promote specials and deals, as well as post customer action shots.  Each month we pick one action shot and give the owner a 20$ gift card!', 'pinterest.png');
 
 -- --------------------------------------------------------
 
@@ -137,29 +138,15 @@ CREATE TABLE IF NOT EXISTS `products` (
   `yearAdded` int(4) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `productName` (`productName`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`ID`, `productName`, `price`, `stockCount`, `shipping`, `imgPath1`, `imgPath2`, `imgPath3`, `imgThumb`, `description`, `weight`, `dimension`, `numOfViews`, `monthAdded`, `yearAdded`) VALUES
-(1, 'Plush Minecraft Cube', '8.00', 10, '3.00', 'mineCube1.jpg', 'mineCube2.jpg', NULL, 'mineCube.jpg', 'A fluffy plush toy for any Minecraft enthusiast.  Soft and safe for the young Minecraft lover.  Composed of printed 6 Ounce Cotton. ', 'Very Light', '~ 3 in x 3 in', 0, 3, 2013),
-(2, 'Plush BMO - Adventure Time', '30.00', 4, '5.00', 'bmo1.img', 'bmo2.img', 'bmo3.img', 'bmo.img', 'A love-able, real sized replica of BMO from Adventure Time.  She sits very nicely and is astoundingly well behaved.  Modifications and controller accessories can be added on commission basis, just email your request. ', 'Light', '~ 10 in * 6 in', 0, 3, 2013);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE IF NOT EXISTS `user` (
-  `uid` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `password` varchar(60) NOT NULL,
-  PRIMARY KEY (`uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+(1, 'Plush Minecraft Cube', 8.00, 10, 3.00, 'mineCube1.jpg', 'mineCube2.jpg', NULL, 'mineCube.jpg', 'A fluffy plush toy for any Minecraft enthusiast.  Soft and safe for the young Minecraft lover.  Composed of printed 6 Ounce Cotton. ', 'Very Light', '~ 3 in x 3 in', 0, 3, 2013),
+(2, 'Plush BMO - Adventure Time', 30.00, 4, 5.00, 'bmo1.img', 'bmo2.img', 'bmo3.img', 'bmo.img', 'A love-able, real sized replica of BMO from Adventure Time.  She sits very nicely and is astoundingly well behaved.  Modifications and controller accessories can be added on commission basis, just email your request. ', 'Light', '~ 10 in * 6 in', 0, 3, 2013);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
